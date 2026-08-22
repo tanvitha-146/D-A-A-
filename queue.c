@@ -20,8 +20,8 @@ void enqueue(int value) {
     if (isEmpty()) {
         front = rear = newNode;
     } else {
-        rear->next = newNode; // Link old rear to the new node
-        rear = newNode;       // Update rear to point to the new node
+        rear->next = newNode; 
+        rear = newNode;       
     }
     printf("%d enqueued to queue\n", value);
 }
@@ -33,7 +33,7 @@ int dequeue() {
     }
     struct Node* temp = front;
     int dequeuedValue = temp->data;
-    front = front->next; // Move front pointer to the next node
+    front = front->next; 
     if (front == NULL) {
         rear = NULL;
     }
