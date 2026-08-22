@@ -12,8 +12,8 @@ void push(int value) {
         return;
     }
     newNode->data = value;
-    newNode->next = top; // Link the new node to the previous top
-    top = newNode;       // Make the new node the top
+    newNode->next = top; 
+    top = newNode;       
     printf("%d pushed to stack\n", value);
 }
 int isEmpty() {
@@ -26,8 +26,8 @@ int pop() {
     }
     struct Node* temp = top;
     int poppedValue = temp->data;
-    top = top->next;     // Move the top pointer to the next node
-    free(temp);          // Free the memory of the old top node
+    top = top->next;     
+    free(temp);         
     return poppedValue;
 }
 int peek() {
